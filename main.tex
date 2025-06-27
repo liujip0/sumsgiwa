@@ -1,0 +1,156 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage[letterpaper, portrait, margin=1in]{geometry}
+\usepackage{graphicx} % Required for inserting images
+
+\usepackage[T1]{fontenc}
+
+\usepackage[skip=1em, indent=0pt]{parskip}
+
+\usepackage{fontspec}
+\newfontface{\sumsgiwafont}{font1}
+    [
+        Path=./,
+        Extension=.ttf,
+        Renderer=HarfBuzz,
+        RawFeature={+kern, +liga}
+    ]
+\usepackage{expl3}
+\ExplSyntaxOn
+\NewDocumentCommand{\sumsgiwasub}{m}
+{
+  \group_begin:
+  \tl_set:Nn \l_sg_input_tl {#1}
+  
+  % Basic replacements (unchanged)
+  \tl_replace_all:Nnn \l_sg_input_tl { \\ } { \textbackslash }
+  \tl_replace_all:Nnn \l_sg_input_tl { sg } { 6 }
+  \tl_replace_all:Nnn \l_sg_input_tl { sd } { 5 }
+  \tl_replace_all:Nnn \l_sg_input_tl { sb } { 4 }
+  \tl_replace_all:Nnn \l_sg_input_tl { šg } { 3 }
+  \tl_replace_all:Nnn \l_sg_input_tl { šd } { 2 }
+  \tl_replace_all:Nnn \l_sg_input_tl { šb } { 1 }
+  \tl_replace_all:Nnn \l_sg_input_tl { č } { C }
+  \tl_replace_all:Nnn \l_sg_input_tl { ż } { 9 }
+  \tl_replace_all:Nnn \l_sg_input_tl { ž } { Z }
+  \tl_replace_all:Nnn \l_sg_input_tl { š } { S }
+  \tl_replace_all:Nnn \l_sg_input_tl { o } {}
+  
+  % Conditional replacements using regex lookahead
+  \regex_replace_all:nnN { m([^aeiou]) } { M\1 } \l_sg_input_tl  % Before consonants
+  \regex_replace_all:nnN { n([^aeiou]) } { N\1 } \l_sg_input_tl
+  \regex_replace_all:nnN { ñ([^aeiou]) } { 8\1 } \l_sg_input_tl
+  \regex_replace_all:nnN { ñ([aeiou]) } { 7\1 } \l_sg_input_tl   % Before vowels
+  
+  % Handle word-final positions (no following character)
+  \regex_replace_all:nnN { m\Z } { M } \l_sg_input_tl
+  \regex_replace_all:nnN { n\Z } { N } \l_sg_input_tl
+  \regex_replace_all:nnN { ñ\Z } { 8 } \l_sg_input_tl
+  
+  \tl_use:N \l_sg_input_tl
+  \group_end:
+}
+\ExplSyntaxOff
+
+\DeclareRobustCommand{\SG}[1]{{%
+  {\sumsgiwafont\sumsgiwasub{#1}}%
+}}
+
+\usepackage{titlesec}
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+\titleformat{\paragraph}
+    [hang]
+    {\normalfont\small\bfseries}
+    {\theparagraph}
+    {10pt}
+    {}
+    [\noindent]
+\titleformat{\subparagraph}
+    [hang]
+    {\normalfont\footnotesize\bfseries}
+    {\thesubparagraph}
+    {7pt}
+    {}
+    [\noindent]
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{-20pt}
+\titlespacing*{\subparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{-20pt}
+
+\usepackage{hyperref}
+\hypersetup{
+    pdfborderstyle={/S/U},
+    linktoc=all
+}
+\usepackage{nameref}
+\newcommand*{\fullref}[1]{\hyperref[{#1}]{\ref*{#1} \nameref*{#1}}}
+
+\usepackage{multicol}
+
+\usepackage[english]{babel}
+\usepackage[autostyle, english = american]{csquotes}
+\MakeOuterQuote{"}
+
+\usepackage[mcolblock, leipzighyper, toc, glosses, symbols, acronyms]{leipzig}
+\usepackage{glossary-mcols}
+\renewcommand{\leipzigname}{Glossing Abbreviations}
+\setglossarystyle{mcolindex}
+\renewcommand{\leipzigfont}[1]{\textsc{#1}}
+\makeglossaries
+\input{00_Glossary}
+\newcommand\Glossfull[2][]{\Acrlong[#1]{#2} \acrshort[#1]{#2}}
+\newcommand\glossfull[2][]{\acrlong[#1]{#2} \acrshort[#1]{#2}}
+
+\usepackage{multirow}
+\renewcommand{\arraystretch}{1.1}
+% Define "struts" as suggested by Claudio Beccari in
+% a piece in TeX and TUG News, Vol. 2, 1993.
+\newcommand\Tstrut{\rule{0pt}{2.6ex}}       % "top" strut
+\newcommand\Bstrut{\rule[-0.9ex]{0pt}{0pt}} % "bottom" strut
+\newcommand{\TBstrut}{\Tstrut\Bstrut}
+\usepackage{array}
+\usepackage{longtable}
+
+\usepackage{enumitem}
+
+\usepackage{tipa}
+\usepackage{textcomp}
+
+\usepackage{hanging}
+
+\newcommand{\entry}[4]
+    {\textbf{#1}\ {/\textipa{#2}/}\ \textit{#3}\ $\bullet$\ {#4}}
+
+\usepackage{expex}
+\definelingstyle{defaultgloss}{
+    everygla={},
+    belowglpreambleskip=-1.3em,
+    aboveglftskip=-1em
+}
+
+\newcommand{\oct}[1]{#1\textsubscript{8}}
+\newcommand{\dec}[1]{#1\textsubscript{10}}
+\newcommand{\doz}[1]{#1\textsubscript{12}}
+
+\title{Sumsgiwa}
+\author{liujip0}
+\date{December 2024}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\clearpage
+
+\input{00_Util}
+\input{01_Introduction}
+\input{02_Typology}
+\input{03_Phonology}
+\input{04_Grammar/04_Grammar}
+\input{05_Quantifiers}
+\input{06_Lexicon/06_Lexicon}
+\input{07_Translations}
+
+\clearpage
+\printglossary
+\printacronyms
+\printglosses
+
+\end{document}
