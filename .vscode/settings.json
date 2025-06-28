@@ -10,5 +10,6 @@
     "linktoc",
     "nlevel",
     "Sumsgiwa"
-  ]
+  ],
+  "latex-workshop.latex.build.forceRecipeUsage": false
 }
