@@ -15,19 +15,19 @@
 % \DeclareFontFamily{T1}{lmr}{\hyphenchar\font\m@ne}
 
 \newfontface{\sumsgiwafont}{font1}
-    [
-        Path=./,
-        Extension=.ttf,
-        Renderer=HarfBuzz,
-        RawFeature={+kern, +liga}
-    ]
+[
+  Path=./,
+  Extension=.ttf,
+  Renderer=HarfBuzz,
+  RawFeature={+kern, +liga}
+]
 \usepackage{expl3}
 \ExplSyntaxOn
 \newcommand{\sumsgiwasub}[1]
 {
   \group_begin:
   \tl_set:Nn \l_sg_input_tl {#1}
-  
+
   % Basic replacements (unchanged)
   \regex_replace_all:nnN { sg } { 6 } \l_sg_input_tl
   \regex_replace_all:nnN { sd } { 5 } \l_sg_input_tl
@@ -40,51 +40,51 @@
   \regex_replace_all:nnN { \c{v}\cB\{z\cE\} } { Z } \l_sg_input_tl
   \regex_replace_all:nnN { \c{v}\cB\{s\cE\} } { S } \l_sg_input_tl
   \regex_replace_all:nnN { o } {} \l_sg_input_tl
-  
+
   % Conditional replacements using regex lookahead
   \regex_replace_all:nnN { m([^aeiou]) } { M\1 } \l_sg_input_tl  % Before consonants
   \regex_replace_all:nnN { n([^aeiou]) } { N\1 } \l_sg_input_tl
   \regex_replace_all:nnN { ñ([^aeiou]) } { 8\1 } \l_sg_input_tl
   \regex_replace_all:nnN { ñ([aeiou]) } { 7\1 } \l_sg_input_tl   % Before vowels
-  
+
   % Handle word-final positions (no following character)
   \regex_replace_all:nnN { m\Z } { M } \l_sg_input_tl
   \regex_replace_all:nnN { n\Z } { N } \l_sg_input_tl
   \regex_replace_all:nnN { ñ\Z } { 8 } \l_sg_input_tl
-  
+
   \tl_use:N \l_sg_input_tl
   \group_end:
 }
 \ExplSyntaxOff
 
 \DeclareRobustCommand{\SG}[1]{{%
-  {\sumsgiwafont\sumsgiwasub{#1}}%
+    {\sumsgiwafont\Large\sumsgiwasub{#1}}%
 }}
 
 \usepackage{titlesec}
 \setcounter{secnumdepth}{5}
 \setcounter{tocdepth}{5}
 \titleformat{\paragraph}
-    [hang]
-    {\normalfont\small\bfseries}
-    {\theparagraph}
-    {10pt}
-    {}
-    [\noindent]
+[hang]
+{\normalfont\small\bfseries}
+{\theparagraph}
+{10pt}
+{}
+[\noindent]
 \titleformat{\subparagraph}
-    [hang]
-    {\normalfont\footnotesize\bfseries}
-    {\thesubparagraph}
-    {7pt}
-    {}
-    [\noindent]
+[hang]
+{\normalfont\footnotesize\bfseries}
+{\thesubparagraph}
+{7pt}
+{}
+[\noindent]
 \titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{-20pt}
 \titlespacing*{\subparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{-20pt}
 
 \usepackage{hyperref}
 \hypersetup{
-    pdfborderstyle={/S/U},
-    linktoc=all
+  pdfborderstyle={/S/U},
+  linktoc=all
 }
 \usepackage{nameref}
 \newcommand*{\fullref}[1]{\hyperref[{#1}]{\ref*{#1} \nameref*{#1}}}
@@ -124,13 +124,13 @@
 \usepackage{hanging}
 
 \newcommand{\entry}[4]
-    {\textbf{#1}\ {/\textipa{#2}/}\ \textit{#3}\ $\bullet$\ {#4}}
+{\textbf{#1}\ {/\textipa{#2}/}\ \textit{#3}\ $\bullet$\ {#4}}
 
 \usepackage{expex}
 \definelingstyle{defaultgloss}{
-    everygla={},
-    belowglpreambleskip=-1.3em,
-    aboveglftskip=-1em
+  everygla={},
+  belowglpreambleskip=-1.3em,
+  aboveglftskip=-1em
 }
 
 \newcommand{\oct}[1]{#1\textsubscript{8}}
