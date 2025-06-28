@@ -2,11 +2,16 @@
 \usepackage[letterpaper, portrait, margin=1in]{geometry}
 \usepackage{graphicx} % Required for inserting images
 
-\usepackage[T1]{fontenc}
-
 \usepackage[skip=1em, indent=0pt]{parskip}
 
+\usepackage{lmodern}
 \usepackage{fontspec}
+
+\usepackage[safe,T1]{tipa}
+\DeclareFontFamilySubstitution{T3}{\familydefault}{cmr}
+\usepackage{textcomp}
+% \DeclareFontFamily{T1}{lmr}{\hyphenchar\font\m@ne}
+
 \newfontface{\sumsgiwafont}{font1}
     [
         Path=./,
@@ -16,24 +21,23 @@
     ]
 \usepackage{expl3}
 \ExplSyntaxOn
-\NewDocumentCommand{\sumsgiwasub}{m}
+\newcommand{\sumsgiwasub}[1]
 {
   \group_begin:
   \tl_set:Nn \l_sg_input_tl {#1}
   
   % Basic replacements (unchanged)
-  \tl_replace_all:Nnn \l_sg_input_tl { \\ } { \textbackslash }
-  \tl_replace_all:Nnn \l_sg_input_tl { sg } { 6 }
-  \tl_replace_all:Nnn \l_sg_input_tl { sd } { 5 }
-  \tl_replace_all:Nnn \l_sg_input_tl { sb } { 4 }
-  \tl_replace_all:Nnn \l_sg_input_tl { šg } { 3 }
-  \tl_replace_all:Nnn \l_sg_input_tl { šd } { 2 }
-  \tl_replace_all:Nnn \l_sg_input_tl { šb } { 1 }
-  \tl_replace_all:Nnn \l_sg_input_tl { č } { C }
-  \tl_replace_all:Nnn \l_sg_input_tl { ż } { 9 }
-  \tl_replace_all:Nnn \l_sg_input_tl { ž } { Z }
-  \tl_replace_all:Nnn \l_sg_input_tl { š } { S }
-  \tl_replace_all:Nnn \l_sg_input_tl { o } {}
+  \regex_replace_all:nnN { sg } { 6 } \l_sg_input_tl
+  \regex_replace_all:nnN { sd } { 5 } \l_sg_input_tl
+  \regex_replace_all:nnN { sb } { 4 } \l_sg_input_tl
+  \regex_replace_all:nnN { \c{v}\cB\{s\cE\}g } { 3 } \l_sg_input_tl
+  \regex_replace_all:nnN { \c{v}\cB\{s\cE\}d } { 2 } \l_sg_input_tl
+  \regex_replace_all:nnN { \c{v}\cB\{s\cE\}b } { 1 } \l_sg_input_tl
+  \regex_replace_all:nnN { \c{v}\cB\{c\cE\} } { C } \l_sg_input_tl
+  \regex_replace_all:nnN { \c{.}\cB\{z\cE\} } { 9 } \l_sg_input_tl
+  \regex_replace_all:nnN { \c{v}\cB\{z\cE\} } { Z } \l_sg_input_tl
+  \regex_replace_all:nnN { \c{v}\cB\{s\cE\} } { S } \l_sg_input_tl
+  \regex_replace_all:nnN { o } {} \l_sg_input_tl
   
   % Conditional replacements using regex lookahead
   \regex_replace_all:nnN { m([^aeiou]) } { M\1 } \l_sg_input_tl  % Before consonants
@@ -83,13 +87,17 @@
 \usepackage{nameref}
 \newcommand*{\fullref}[1]{\hyperref[{#1}]{\ref*{#1} \nameref*{#1}}}
 
+\usepackage{url}
+
 \usepackage{multicol}
 
-\usepackage[english]{babel}
+\usepackage[english, provide=*]{babel}
 \usepackage[autostyle, english = american]{csquotes}
 \MakeOuterQuote{"}
 
+\usepackage{datatool}[=v2.32]
 \usepackage[mcolblock, leipzighyper, toc, glosses, symbols, acronyms]{leipzig}
+\usepackage{glossaries}
 \usepackage{glossary-mcols}
 \renewcommand{\leipzigname}{Glossing Abbreviations}
 \setglossarystyle{mcolindex}
@@ -110,9 +118,6 @@
 \usepackage{longtable}
 
 \usepackage{enumitem}
-
-\usepackage{tipa}
-\usepackage{textcomp}
 
 \usepackage{hanging}
 
