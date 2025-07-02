@@ -13,27 +13,25 @@ Yes/no questions are marked by placing the question particle \textlangle \v{s}ge
 \paragraph{Content Questions}
 Content questions use the same interrogative marker as yes/no questions, \textlangle \v{s}gezu\textrangle, but also use the following question words in situ:
 
-\begin{tabular}{|c|c|c|}
-  \hline
-  \Acrlong{nom} Noun & \textlangle sensu\textrangle & \TBstrut\\
-  \hline
-  \Acrlong{erg} Noun & \textlangle senyu\textrangle & \TBstrut\\
-  \hline
-  \Acrlong{acc} Noun & \textlangle senge\textrangle & \TBstrut\\
-  \hline
-  \Acrlong{dat} Noun & \textlangle senbi\textrangle & \TBstrut\\
-  \hline
-  \Acrlong{gen} Noun & \textlangle sen\v{z}o\textrangle & \TBstrut\\
-  \hline
-  Time Adverb & \textlangle \v{s}anbi\textrangle & \TBstrut\\
-  \hline
-  Location Adverb & \textlangle \v{s}anzim\textrangle & \TBstrut\\
-  \hline
-  Manner Adverb & \textlangle \v{s}an\v{z}e\textrangle & \TBstrut\\
-  \hline
-  Purpose/Reason Adverb & \textlangle \v{s}ansum\textrangle & \TBstrut\\
-  \hline
-\end{tabular}
+{
+  \newcommand{\TableRow}[2]{
+    #1 & \textlangle #2\textrangle & \SG{#2} \TBstrut\\
+    \hline
+  }
+
+  \begin{tabular}{|c|c|c|}
+    \hline
+    \TableRow{\Acrlong{nom} Noun}{sensu}
+    \TableRow{\Acrlong{erg} Noun}{senyu}
+    \TableRow{\Acrlong{acc} Noun}{senge}
+    \TableRow{\Acrlong{dat} Noun}{senbi}
+    \TableRow{\Acrlong{gen} Noun}{sen\v{z}o}
+    \TableRow{Time Adverb}{\v{s}anbi}
+    \TableRow{Location Adverb}{\v{s}anzim}
+    \TableRow{Manner Adverb}{\v{s}an\v{z}e}
+    \TableRow{Purpose/Reason Adverb}{\v{s}ansum}
+  \end{tabular}
+}
 %TODO: example
 
 \subsubsection{Imperatives} \label{04_03_03_Imperatives}

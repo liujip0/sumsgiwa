@@ -65,33 +65,60 @@ Demonstratives agree with the nouns they modify in gender, and are split into 3 
   \item[\Glossfull{med}] Close to the listener
   \item[\Glossfull{dist}] Far from both the speaker and the listener
 \end{description}
-\begin{tabular}{|l|c|c|c|}
-  \hline
-  & \Glossfull{prox} &
-  \Glossfull{med} &
-  \Glossfull{dist} \TBstrut\\
-  \hline
+{
+  \newcommand{\TableRow}[4]{
+    \multirow{2}{*}{\Glossfull{#1}} &
+    \textlangle #2\textrangle &
+    \textlangle #3\textrangle &
+    \textlangle #4\textrangle \Tstrut\\
+    & \SG{#2} & \SG{#3} & \SG{#4} \Bstrut\\
+    \hline
+  }
 
-  \multirow{2}{*}{\Glossfull{hg}} &
-  \textlangle ke\v{s}i\textrangle &
-  \textlangle zi\v{s}go\textrangle &
-  \textlangle simsbe\textrangle \Tstrut\\
-  & & & \Bstrut\\
-  \hline
+  \begin{tabular}{|l|c|c|c|}
+    \hline
+    & \Glossfull{prox} &
+    \Glossfull{med} &
+    \Glossfull{dist} \TBstrut\\
+    \hline
 
-  \multirow{2}{*}{\Glossfull{an}} &
-  \textlangle gunzin\textrangle &
-  \textlangle sgaku\textrangle &
-  \textlangle densi\textrangle \Tstrut\\
-  & & & \Bstrut\\
-  \hline
+    \TableRow{hg}{ke\v{s}i}{zi\v{s}go}{simsbe}
 
-  \multirow{2}{*}{\Glossfull{inan}} &
-  \textlangle dazo\textrangle &
-  \textlangle yezi\textrangle &
-  \textlangle \v{s}osu\textrangle \Tstrut\\
-  & & & \Bstrut\\
-  \hline
-\end{tabular}
+    \TableRow{an}{gunzin}{sgaku}{densi}
+
+    \TableRow{inan}{dazo}{yezi}{\v{s}osu}
+  \end{tabular}
+}
 
 Sumsgiwa does not have demonstrative pronouns, so it uses a demonstrative adjective and a generic noun to specify the same meaning.
+
+\paragraph{Distributive Determiners}
+
+Distributive determiners agree with the nouns they modify in gender.
+
+See \fullref{05_02_D-Quantifiers}.
+
+\paragraph{Determiners of Difference}
+
+Determiners of difference agree with the nouns they modify in gender.
+
+{
+  \newcommand{\TableRow}[2]{
+    \multirow{2}{*}{\Glossfull{#1}} &
+    \textlangle #2\textrangle \Tstrut\\
+    & \SG{#2} \Bstrut\\
+    \hline
+  }
+
+  \begin{tabular}{|l|c|}
+    \hline
+    & "another/other" \TBstrut\\
+    \hline
+
+    \TableRow{hg}{dim\v{z}i}
+
+    \TableRow{an}{tu\v{z}e}
+
+    \TableRow{inan}{\v{z}osa}
+  \end{tabular}
+}

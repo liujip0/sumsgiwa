@@ -1,256 +1,218 @@
 \subsection{Parts of Speech}
 
-\subsubsection{Nouns}
+{
+  \newcommand{\TableRowPrefix}[2]{
+    \Glossfull{#1} &
+    \textlangle #2\textrangle - & \SG{#2} \TBstrut\\
+    \hline
+  }
+  \newcommand{\TableRowSuffix}[2]{
+    \Glossfull{#1} &
+    -\textlangle #2\textrangle & \SG{#2} \TBstrut\\
+    \hline
+  }
+  \newcommand{\TableRowInfix}[2]{
+    \Glossfull{#1} &
+    -\textlangle #2\textrangle - & \SG{#2} \TBstrut\\
+    \hline
+  }
 
-\paragraph{Noun Phrases}
-Noun phrases are structured as follows:
+  \subsubsection{Nouns}
 
-{[}Adposition{]}\\
-{[}Ordinal{]}\\
-Case-NOUN STEM-{[}Augmentative/Diminutive{]}\\
-{[}Adjective(s){]}\\
-{[}Comparative{}]\\
-{[}Cardinal/Quantifier{]}\\
-{[}Demonstrative{]}\\
-{[}Genitive{]}\\
-{[}Relative Phrase{]}
+  \paragraph{Noun Phrases}
+  Noun phrases are structured as follows:
 
-{[]} = optional part of noun phrase
-%TODO: example
+  {[}Adposition{]}\\
+  {[}Ordinal{]}\\
+  Case-NOUN STEM-{[}Augmentative/Diminutive{]}\\
+  {[}Adjective(s){]}\\
+  {[}Comparative{}]\\
+  {[}Cardinal/Quantifier{]}\\
+  {[}Demonstrative{]}\\
+  {[}Genitive{]}\\
+  {[}Relative Phrase{]}
 
-\paragraph{Noun Cases}
-There are 5 cases in Sumsgiwa indicated using prefixes:
-\begin{description}
-  \item[\Glossfull{nom}] \Gls{subject} of an intransitive verb
-  \item[\Glossfull{erg}] \Gls{agent} of a transitive verb
-  \item[\Glossfull{acc}] \Gls{patient} of a transitive verb
-  \item[\Glossfull{dat}] Indirect object of a verb
-  \item[\Glossfull{gen}] Modifier of another noun
-\end{description}
-\begin{tabular}{|l|c|c|}
-  \hline
-  \Glossfull{nom} &
-  \textlangle ja\textrangle - & \TBstrut\\
-  \hline
-  \Glossfull{erg} &
-  \textlangle di\textrangle - & \TBstrut\\
-  \hline
-  \Glossfull{acc} &
-  \textlangle \v{s}a\textrangle - & \TBstrut\\
-  \hline
-  \Glossfull{dat} &
-  \textlangle \v{s}o\textrangle - & \TBstrut\\
-  \hline
-  \Glossfull{gen} &
-  \textlangle ne\textrangle - & \TBstrut\\
-  \hline
-\end{tabular}
+  {[]} = optional part of noun phrase
+  %TODO: example
 
-\paragraph{Gender}
-There are 3 genders, and nouns are categorized purely through semantics, rather than through phonology or spelling.
-\begin{description}
-  \item[\Glossfull{hg}] Humans, body parts, nouns relating to language
-  \item[\Glossfull{an}] Animals, thoughts
-  \item[\Glossfull{inan}] Objects, plants, fungi
-\end{description}
-Both adjectives and verbs must agree with nouns in gender.
+  \paragraph{Noun Cases}
+  There are 5 cases in Sumsgiwa indicated using prefixes:
+  \begin{description}
+    \item[\Glossfull{nom}] \Gls{subject} of an intransitive verb
+    \item[\Glossfull{erg}] \Gls{agent} of a transitive verb
+    \item[\Glossfull{acc}] \Gls{patient} of a transitive verb
+    \item[\Glossfull{dat}] Indirect object of a verb
+    \item[\Glossfull{gen}] Modifier of another noun
+  \end{description}
+  \begin{tabular}{|l|c|c|}
+    \hline
+    \TableRowPrefix{nom}{ja}
+    \TableRowPrefix{erg}{di}
+    \TableRowPrefix{acc}{\v{s}a}
+    \TableRowPrefix{dat}{\v{s}o}
+    \TableRowPrefix{gen}{ne}
+  \end{tabular}
 
-\subsubsection{Verbs}
+  \paragraph{Gender}
+  There are 3 genders, and nouns are categorized purely through semantics, rather than through phonology or spelling.
+  \begin{description}
+    \item[\Glossfull{hg}] Humans, body parts, nouns relating to language
+    \item[\Glossfull{an}] Animals, thoughts
+    \item[\Glossfull{inan}] Objects, plants, fungi
+  \end{description}
+  Both adjectives and verbs must agree with nouns in gender.
 
-\paragraph{Verb Phrases}
-Verb phrases are structured as follows:
+  \subsubsection{Verbs}
 
-{[}Question Particle{]}\\
-Mood-Aspect-VERB STEM-Gender of S-Gender of A-Gender of P\\
-{[}Adverb(s){]}
+  \paragraph{Verb Phrases}
+  Verb phrases are structured as follows:
 
-{[]} = optional part of verb phrase
-%TODO: example
+  {[}Question Particle{]}\\
+  Mood-Aspect-VERB STEM-Gender of S-Gender of A-Gender of P\\
+  {[}Adverb(s){]}
 
-\paragraph{Mood}
-Verbs have 4 moods marked using prefixes:
-\begin{description}
-  \item[\Glossfull{ind}] Default, all \gls{realis} statements
-  \item[\Glossfull{opt}] Wishes, hopes, and desires
-  \item[\Glossfull{deo}] How things "ought" to be
-  \item[\Glossfull{sjv}] All other \gls{irrealis} statements
-\end{description}
-\begin{tabular}{|l|c|c|}
-  \hline
-  \Glossfull{ind} &
-  Ø- or \textlangle s\textrangle - & \TBstrut\\
-  \hline
-  \Glossfull{opt} &
-  \textlangle \v{s}d\textrangle - & \TBstrut\\
-  \hline
-  \Glossfull{deo} &
-  \textlangle \v{s}u\v{c}\textrangle - & \TBstrut\\
-  \hline
-  \Glossfull{sjv} &
-  \textlangle y\textrangle - & \TBstrut\\
-  \hline
-\end{tabular}
+  {[]} = optional part of verb phrase
+  %TODO: example
 
-Imperative statements use the \acrlong{deo} mood. [See \fullref{04_03_03_Imperatives}]
+  \paragraph{Mood}
+  Verbs have 4 moods marked using prefixes:
+  \begin{description}
+    \item[\Glossfull{ind}] Default, all \gls{realis} statements
+    \item[\Glossfull{opt}] Wishes, hopes, and desires
+    \item[\Glossfull{deo}] How things "ought" to be
+    \item[\Glossfull{sjv}] All other \gls{irrealis} statements
+  \end{description}
+  \begin{tabular}{|l|c|c|}
+    \hline
+    \Glossfull{ind} &
+    Ø- or \textlangle s\textrangle - & \SG{s} \TBstrut\\
+    \hline
+    \Glossfull{opt} &
+    \textlangle \v{s}d\textrangle - & \SG{\v{s}d} \TBstrut\\
+    \hline
+    \Glossfull{deo} &
+    \textlangle \v{s}u\v{c}\textrangle - & \SG{\v{s}u\v{c}} \TBstrut\\
+    \hline
+    \Glossfull{sjv} &
+    \textlangle y\textrangle - & \SG{y} \TBstrut\\
+    \hline
+  \end{tabular}
 
-\paragraph{Aspect}
-Verbs have 4 aspects marked with prefixes:
-\begin{description}
-  \item[\Glossfull{pfv}] Complete action as a single event in time
-  \item[\Glossfull{hab}] Habitual actions (repetition over multiple occasions)
-  \item[\Glossfull{iter}] Repeated actions (repetition at a single occasion)
-  \item[\Glossfull{prog}] Action in progress at a specific time (incl. continuous)
-\end{description}
-\begin{tabular}{|l|c|c|}
-  \hline
-  \Glossfull{pfv} &
-  -Ø- or -\textlangle e\textrangle - & \TBstrut\\
-  \hline
-  \Glossfull{hab} &
-  -\textlangle ini\textrangle - & \TBstrut\\
-  \hline
-  \Glossfull{iter} &
-  -\textlangle i\textrangle - & \TBstrut\\
-  \hline
-  \Glossfull{prog} &
-  -\textlangle a\textrangle - & \TBstrut\\
-  \hline
-\end{tabular}
+  Imperative statements use the \acrlong{deo} mood. [See \fullref{04_03_03_Imperatives}]
 
-\paragraph{Agreement with Nouns} \label{04_01_02_04_Agreement with Nouns}
-Verbs agree with their subject, agent, and patient arguments in gender.
+  \paragraph{Aspect}
+  Verbs have 4 aspects marked with prefixes:
+  \begin{description}
+    \item[\Glossfull{pfv}] Complete action as a single event in time
+    \item[\Glossfull{hab}] Habitual actions (repetition over multiple occasions)
+    \item[\Glossfull{iter}] Repeated actions (repetition at a single occasion)
+    \item[\Glossfull{prog}] Action in progress at a specific time (incl. continuous)
+  \end{description}
+  \begin{tabular}{|l|c|c|}
+    \hline
+    \Glossfull{pfv} &
+    -Ø- or -\textlangle e\textrangle - & \SG{se} \TBstrut\\
+    \hline
+    \Glossfull{hab} &
+    -\textlangle ini\textrangle - & \SG{sini} \TBstrut\\
+    \hline
+    \Glossfull{iter} &
+    -\textlangle i\textrangle - & \SG{si} \TBstrut\\
+    \hline
+    \Glossfull{prog} &
+    -\textlangle a\textrangle - & \SG{sa} \TBstrut\\
+    \hline
+  \end{tabular}
 
-\subparagraph{Subject Gender}
-\begin{tabular}{|l|c|c|}
-  \hline
-  \Glossfull{hg} &
-  -\textlangle po\textrangle &\TBstrut\\
-  \hline
-  \Glossfull{an} &
-  -\textlangle \v{z}u\textrangle &\TBstrut\\
-  \hline
-  \Glossfull{inan} &
-  -\textlangle \v{s}bi\textrangle &\TBstrut\\
-  \hline
-\end{tabular}
+  \paragraph{Agreement with Nouns} \label{04_01_02_04_Agreement with Nouns}
+  Verbs agree with their subject, agent, and patient arguments in gender.
 
-\subparagraph{Agent Gender}
-\begin{tabular}{|l|c|c|}
-  \hline
-  \Glossfull{hg} &
-  -\textlangle jo\textrangle - &\TBstrut\\
-  \hline
-  \Glossfull{an} &
-  -\textlangle \v{c}e\textrangle - &\TBstrut\\
-  \hline
-  \Glossfull{inan} &
-  -\textlangle sba\textrangle - &\TBstrut\\
-  \hline
-\end{tabular}
+  \subparagraph{Subject Gender}
+  \begin{tabular}{|l|c|c|}
+    \hline
+    \TableRowSuffix{hg}{po}
+    \TableRowSuffix{an}{\v{z}u}
+    \TableRowSuffix{inan}{\v{s}bi}
+  \end{tabular}
 
-\subparagraph{Patient Gender}
-\begin{tabular}{|l|c|c|}
-  \hline
-  \Glossfull{hg} &
-  -\textlangle pon\textrangle &\TBstrut\\
-  \hline
-  \Glossfull{an} &
-  -\textlangle \v{s}um\textrangle &\TBstrut\\
-  \hline
-  \Glossfull{inan} &
-  -\textlangle \v{z}o\textrangle &\TBstrut\\
-  \hline
-\end{tabular}
+  \subparagraph{Agent Gender}
+  \begin{tabular}{|l|c|c|}
+    \hline
+    \TableRowInfix{hg}{jo}
+    \TableRowInfix{an}{\v{c}e}
+    \TableRowInfix{an}{sba}
+  \end{tabular}
 
-\subsubsection{Adjectives}
-Adjectives are structured as follows:
+  \subparagraph{Patient Gender}
+  \begin{tabular}{|l|c|c|}
+    \hline
+    \TableRowSuffix{hg}{pon}
+    \TableRowSuffix{an}{\v{s}um}
+    \TableRowSuffix{inan}{\v{z}o}
+  \end{tabular}
 
-Case-ADJECTIVE STEM-Gender
-%TODO: example
+  \subsubsection{Adjectives}
+  Adjectives are structured as follows:
 
-\paragraph{Agreement with Nouns}
-Adjectives agree with the nouns they modify in case and gender.
+  Case-ADJECTIVE STEM-Gender
+  %TODO: example
 
-\subparagraph{Case}
-\begin{tabular}{|l|c|c|}
-  \hline
-  \Glossfull{nom} &
-  \textlangle \v{c}a\textrangle - & \TBstrut\\
-  \hline
-  \Glossfull{erg} &
-  \textlangle ti\textrangle - & \TBstrut\\
-  \hline
-  \Glossfull{acc} &
-  \textlangle \v{s}a\textrangle - & \TBstrut\\
-  \hline
-  \Glossfull{dat} &
-  \textlangle \v{s}o\textrangle - & \TBstrut\\
-  \hline
-  \Glossfull{gen} &
-  \textlangle ne\textrangle - & \TBstrut\\
-  \hline
-\end{tabular}
+  \paragraph{Agreement with Nouns}
+  Adjectives agree with the nouns they modify in case and gender.
 
-\subparagraph{Gender}
-\begin{tabular}{|l|c|c|}
-  \hline
-  \Glossfull{hg} &
-  -\textlangle po\textrangle &\TBstrut\\
-  \hline
-  \Glossfull{an} &
-  -\textlangle \v{z}u\textrangle &\TBstrut\\
-  \hline
-  \Glossfull{inan} &
-  -\textlangle \v{s}bi\textrangle &\TBstrut\\
-  \hline
-\end{tabular}
+  \subparagraph{Case}
+  \begin{tabular}{|l|c|c|}
+    \hline
+    \TableRowPrefix{nom}{\v{c}a}
+    \TableRowPrefix{erg}{ti}
+    \TableRowPrefix{acc}{\v{s}a}
+    \TableRowPrefix{dat}{\v{s}o}
+    \TableRowPrefix{gen}{ne}
+  \end{tabular}
 
-\subsubsection{Adverbs}
-Adverb structure:
+  \subparagraph{Gender}
+  \begin{tabular}{|l|c|c|}
+    \hline
+    \TableRowSuffix{hg}{po}
+    \TableRowSuffix{an}{\v{z}u}
+    \TableRowSuffix{inan}{\v{s}bi}
+  \end{tabular}
 
-Aspect-ADVERB STEM
+  \subsubsection{Adverbs}
+  Adverb structure:
 
-\textit{or}
+  Aspect-ADVERB STEM
 
-ADVERB STEM-Gender
-%TODO: example
+  \textit{or}
 
-\paragraph{Agreement with Verbs}
-Adverbs follow the verbs they modify and agree with them in aspect.
+  ADVERB STEM-Gender
+  %TODO: example
 
-\subparagraph{Aspect}
-\begin{tabular}{|l|c|c|}
-  \hline
-  \Glossfull{pfv} &
-  Ø- & \TBstrut\\
-  \hline
-  \Glossfull{hab} &
-  \textlangle ni\textrangle - & \TBstrut\\
-  \hline
-  \Glossfull{iter} &
-  \textlangle neye\textrangle - & \TBstrut\\
-  \hline
-  \Glossfull{prog} &
-  \textlangle na\textrangle - & \TBstrut\\
-  \hline
-\end{tabular}
+  \paragraph{Agreement with Verbs}
+  Adverbs follow the verbs they modify and agree with them in aspect.
 
-\paragraph{Agreement with Adjectives}
-Adverbs follow the adjectives they modify and agree with them in gender.
+  \subparagraph{Aspect}
+  \begin{tabular}{|l|c|c|}
+    \hline
+    \Glossfull{pfv} &
+    Ø- & \TBstrut\\
+    \hline
+    \TableRowPrefix{hab}{ni}
+    \TableRowPrefix{iter}{neye}
+    \TableRowPrefix{prog}{na}
+  \end{tabular}
 
-\subparagraph{Gender}
-\begin{tabular}{|l|c|c|}
-  \hline
-  \Glossfull{hg} &
-  -\textlangle po\textrangle &\TBstrut\\
-  \hline
-  \Glossfull{an} &
-  -\textlangle \v{s}u\textrangle &\TBstrut\\
-  \hline
-  \Glossfull{inan} &
-  -\textlangle \v{s}be\textrangle &\TBstrut\\
-  \hline
-\end{tabular}
+  \paragraph{Agreement with Adjectives}
+  Adverbs follow the adjectives they modify and agree with them in gender.
+
+  \subparagraph{Gender}
+  \begin{tabular}{|l|c|c|}
+    \hline
+    \TableRowSuffix{hg}{po}
+    \TableRowSuffix{an}{\v{s}u}
+    \TableRowSuffix{inan}{\v{s}be}
+  \end{tabular}
+}
 
 \subsubsection{Pronouns}
 There are different pronoun forms for each of the 5 cases. Pronouns in Sumsgiwa distinguish between 1st person exclusive and 1st person inclusive, and there are 3 politeness levels for 2nd person pronouns. In addition, there are 3 sets of pronouns for each of the 3 genders.
@@ -263,129 +225,74 @@ There are different pronoun forms for each of the 5 cases. Pronouns in Sumsgiwa 
   \item[\Glossfull{T}] 3rd person
 \end{description}
 
-\paragraph{Human}
-\begin{tabular}{|m{5em}|m{5em}|m{4em}|m{5em}|m{4em}|m{4em}|}
-  \hline
-  & \Glossfull{nom} &
-  \Glossfull{erg} &
-  \Glossfull{acc} &
-  \Glossfull{dat} &
-  \Glossfull{gen} \TBstrut\\
-  \hline
+{
+  \newcommand{\TableRow}[6]{
+    \multirow{2}{5em}{\Glossfull{#1}} &
+    \textlangle #2\textrangle &
+    \textlangle #3\textrangle &
+    \textlangle #4\textrangle &
+    \textlangle #5\textrangle &
+    \textlangle #6\textrangle \Tstrut\\
+    & \SG{#2} & \SG{#3} & \SG{#4} & \SG{#5} & \SG{#6} \Bstrut\\
+    \hline
+  }
+  \newcommand{\TableRowTall}[6]{
+    \multirow{4}{5em}{\Glossfull{#1}} &
+    \textlangle #2\textrangle &
+    \textlangle #3\textrangle &
+    \textlangle #4\textrangle &
+    \textlangle #5\textrangle &
+    \textlangle #6\textrangle \Tstrut\\
+    & \SG{#2} & \SG{#3} & \SG{#4} & \SG{#5} & \SG{#6} \\
+    & & & & & \\
+    & & & & & \Bstrut\\
+    \hline
+  }
+  \newcommand{\TableHead}{\hline
+    & \Glossfull{nom} &
+    \Glossfull{erg} &
+    \Glossfull{acc} &
+    \Glossfull{dat} &
+    \Glossfull{gen} \TBstrut\\
+  \hline}
 
-  \multirow{4}{5em}{\Glossfull{Fex}} &
-  \textlangle yem\textrangle &
-  \textlangle ya\textrangle &
-  \textlangle yu\textrangle &
-  \textlangle ye\.{z}o\textrangle &
-  \textlangle yañi\textrangle \Tstrut\\
-  & & & & & \\
-  & & & & & \\
-  & & & & & \Bstrut\\
-  \hline
+  \paragraph{Human}
 
-  \multirow{4}{5em}{\Glossfull{Fin}} &
-  \textlangle \v{z}em\textrangle &
-  \textlangle \v{z}a\textrangle &
-  \textlangle \v{z}u\textrangle &
-  \textlangle \v{z}e\.{z}o\textrangle &
-  \textlangle \v{z}iñi\textrangle \Tstrut\\
-  & & & & & \\
-  & & & & & \\
-  & & & & & \Bstrut\\
-  \hline
+  \begin{tabular}{|m{5em}|m{5em}|m{4em}|m{5em}|m{4em}|m{4em}|}
+    \TableHead
 
-  \multirow{4}{5em}{\Glossfull{Spol}} &
-  \textlangle ji\v{s}bem\textrangle &
-  \textlangle ji\v{s}ba\textrangle &
-  \textlangle ji\v{s}bu\textrangle &
-  \textlangle ji\.{z}o\textrangle &
-  \textlangle ji\v{s}i\textrangle \Tstrut\\
-  & & & & & \\
-  & & & & & \\
-  & & & & & \Bstrut\\
-  \hline
+    \TableRowTall{Fex}{yem}{ya}{yu}{ye\.{z}o}{yañi}
 
-  \multirow{4}{5em}{\Glossfull{Shum}} &
-  \textlangle \.{z}e\v{s}bem\textrangle &
-  \textlangle \.{z}e\v{s}ba\textrangle &
-  \textlangle \.{z}e\v{s}bu\textrangle &
-  \textlangle \.{z}e\v{z}o\textrangle &
-  \textlangle \.{z}e\v{s}i\textrangle \Tstrut\\
-  & & & & & \\
-  & & & & & \\
-  & & & & & \Bstrut\\
-  \hline
+    \TableRowTall{Fin}{\v{z}em}{\v{z}a}{\v{z}u}{\v{z}e\.{z}o}{\v{z}iñi}
 
-  \multirow{4}{5em}{\Glossfull{Sfam}} &
-  \textlangle \v{s}bem\textrangle &
-  \textlangle \v{s}ba\textrangle &
-  \textlangle \v{s}bu\textrangle &
-  \textlangle \v{s}be\.{z}o\textrangle &
-  \textlangle \v{s}biñi\textrangle \Tstrut\\
-  & & & & & \\
-  & & & & & \\
-  & & & & & \Bstrut\\
-  \hline
+    \TableRowTall{Spol}
+    {ji\v{s}bem}{ji\v{s}ba}{ji\v{s}bu}{ji\.{z}o}{ji\v{s}i}
 
-  \multirow{2}{5em}{\Glossfull{T}} &
-  \textlangle \v{c}em\textrangle &
-  \textlangle \v{c}a\textrangle &
-  \textlangle \v{c}u\textrangle &
-  \textlangle \v{c}u\.{z}o\textrangle &
-  \textlangle \v{c}añi\textrangle \Tstrut\\
-  & & & & & \Bstrut\\
-  \hline
-\end{tabular}
+    \TableRowTall{Shum}
+    {\.{z}e\v{s}bem}{\.{z}e\v{s}ba}{\.{z}e\v{s}bu}{\.{z}e\v{z}o}{\.{z}e\v{s}i}
 
-\paragraph{Animate}
-\begin{tabular}{|m{5em}|m{5em}|m{4em}|m{5em}|m{4em}|m{4em}|}
-  \hline
-  & \Glossfull{nom} &
-  \Glossfull{erg} &
-  \Glossfull{acc} &
-  \Glossfull{dat} &
-  \Glossfull{gen} \TBstrut\\
-  \hline
+    \TableRowTall{Sfam}{\v{s}bem}{\v{s}ba}{\v{s}bu}{\v{s}be\.{z}o}{\v{s}biñi}
 
-  \multirow{2}{5em}{\Glossfull{S}} &
-  \textlangle consi\textrangle &
-  \textlangle consan\textrangle &
-  \textlangle conso\textrangle &
-  \textlangle sonsu\v{c}e\textrangle &
-  \textlangle consu\v{c}i\textrangle \Tstrut\\
-  & & & & & \Bstrut\\
-  \hline
+    \TableRow{T}{\v{c}em}{\v{c}a}{\v{c}u}{\v{c}u\.{z}o}{\v{c}añi}
+  \end{tabular}
 
-  \multirow{2}{5em}{\Glossfull{T}} &
-  \textlangle si\textrangle &
-  \textlangle san\textrangle &
-  \textlangle so\textrangle &
-  \textlangle su\v{c}e\textrangle &
-  \textlangle su\v{c}i\textrangle \Tstrut\\
-  & & & & & \Bstrut\\
-  \hline
-\end{tabular}
+  \paragraph{Animate}
 
-\paragraph{Inanimate}
-\begin{tabular}{|m{5em}|m{5em}|m{4em}|m{5em}|m{4em}|m{4em}|}
-  \hline
-  & \Glossfull{nom} &
-  \Glossfull{erg} &
-  \Glossfull{acc} &
-  \Glossfull{dat} &
-  \Glossfull{gen} \TBstrut\\
-  \hline
+  \begin{tabular}{|m{5em}|m{5em}|m{4em}|m{5em}|m{4em}|m{4em}|}
+    \TableHead
 
-  \multirow{2}{5em}{\Glossfull{T}} &
-  \textlangle yo\textrangle &
-  \textlangle zin\textrangle &
-  \textlangle je\textrangle &
-  \textlangle sayo\textrangle &
-  \textlangle zeyo\textrangle \Tstrut\\
-  & & & & & \Bstrut\\
-  \hline
-\end{tabular}
+    \TableRow{S}{consi}{consan}{conso}{sonsu\v{c}e}{consu\v{c}i}
+
+    \TableRow{T}{si}{san}{so}{su\v{c}e}{su\v{c}i}
+  \end{tabular}
+
+  \paragraph{Inanimate}
+  \begin{tabular}{|m{5em}|m{5em}|m{4em}|m{5em}|m{4em}|m{4em}|}
+    \TableHead
+
+    \TableRow{T}{yo}{zin}{je}{sayo}{zeyo}
+  \end{tabular}
+}
 
 \subsubsection{Adpositions}
 Sumsgiwa uses prepositions that take uninflected nouns. The prepositional phrases follow the verb. However, some functions usually covered by adpositions in other languages are covered by the \acrlong{dat} case.

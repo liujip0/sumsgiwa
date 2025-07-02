@@ -5,495 +5,283 @@ There are 3 numeral systems in Sumsgiwa, each modifying a different gender of no
 
 \subsubsection{Human}
 Numerals modifying \acrlong{hg} nouns are base 8.
+{
+  \newcommand{\TableRow}[3]{
+    \oct{#1} & \dec{#2} &
+    \textlangle #3\textrangle & \SG{#3} \TBstrut\\
+    \hline
+  }
+  \newcommand{\DoubleTableRow}[4]{
+    \multirow{2}{*}{\oct{#1}} & \multirow{2}{*}{\dec{#2}} &
+    \textlangle #3\textrangle & \SG{#3} \Tstrut\\
+    & & \textlangle #4\textrangle & \SG{#4} \Bstrut\\
+    \hline
+  }
+  \newcommand{\DotRow}{
+    \multicolumn{4}{|c|}{\dots} \TBstrut\\
+    \hline
+  }
 
-\begin{longtable}[l]{|c|c|c|c|}
-  \hline
-  \textbf{Octal} &
-  \textbf{Decimal} &
-  \textbf{Sumsgiwa} & \TBstrut\\
-  \hline
-  \endhead
+  \begin{longtable}[l]{|c|c|c|c|}
+    \hline
+    \textbf{Octal} &
+    \textbf{Decimal} &
+    \textbf{Sumsgiwa} & \TBstrut\\
+    \hline
+    \endhead
 
-  \oct{0} & \dec{0} &
-  \textlangle pun\v{z}on\textrangle & \TBstrut\\
-  \hline
-  \oct{1} & \dec{1} &
-  \textlangle \v{z}añe\textrangle & \TBstrut\\
-  \hline
-  \oct{2} & \dec{2} &
-  \textlangle \v{s}ite\textrangle & \TBstrut\\
-  \hline
-  \oct{3} & \dec{3} &
-  \textlangle \v{z}oye\textrangle & \TBstrut\\
-  \hline
-  \oct{4} & \dec{4} &
-  \textlangle da\v{z}i\textrangle & \TBstrut\\
-  \hline
-  \oct{5} & \dec{5} &
-  \textlangle kindu\textrangle & \TBstrut\\
-  \hline
-  \oct{6} & \dec{6} &
-  \textlangle \v{s}oku\textrangle & \TBstrut\\
-  \hline
-  \oct{7} & \dec{7} &
-  \textlangle pa\v{z}u\textrangle & \TBstrut\\
-  \hline
-  \multirow{2}{*}{\oct{10}} & \multirow{2}{*}{\dec{8}} &
-  \textlangle yesa\textrangle & \Tstrut\\
-  & & \textlangle \v{z}aye\v{s}a\textrangle & \Bstrut\\
-  \hline
+    \TableRow{0}{0}{pun\v{z}on}
+    \TableRow{1}{1}{\v{z}añe}
+    \TableRow{2}{2}{\v{s}ite}
+    \TableRow{3}{3}{\v{z}oye}
+    \TableRow{4}{4}{da\v{z}i}
+    \TableRow{5}{5}{kindu}
+    \TableRow{6}{6}{\v{s}oku}
+    \TableRow{7}{7}{pa\v{z}u}
+    \DoubleTableRow{10}{8}{yesa}{\v{z}aye\v{s}a}
+    \DoubleTableRow{11}{9}{yesa \v{z}añe}{\v{z}aye\v{s}a \v{z}añe}
+    \DoubleTableRow{12}{10}{yesa \v{s}ite}{\v{z}ayesa \v{s}ite}
+    \DotRow
 
-  \multirow{2}{*}{\oct{11}} & \multirow{2}{*}{\dec{9}} &
-  \textlangle yesa \v{z}añe\textrangle & \Tstrut\\
-  & & \textlangle \v{z}aye\v{s}a \v{z}añe\textrangle & \Bstrut\\
-  \hline
-  \multirow{2}{*}{\oct{12}} & \multirow{2}{*}{\dec{10}} &
-  \textlangle yesa \v{s}ite\textrangle & \Tstrut\\
-  & & \textlangle \v{z}aye\v{s}a \v{s}ite\textrangle & \Bstrut\\
-  \hline
-  \multicolumn{4}{|c|}{\dots} \TBstrut\\
-  \hline
+    \TableRow{20}{16}{\v{s}iye\v{s}a}
+    \TableRow{21}{17}{\v{s}iye\v{s}a \v{z}añe}
+    \DotRow
 
-  \oct{20} & \dec{16} &
-  \textlangle \v{s}iye\v{s}a\textrangle & \TBstrut\\
-  \hline
-  \oct{21} & \dec{17} &
-  \textlangle \v{s}iye\v{s}a \v{z}añe\textrangle & \TBstrut\\
-  \hline
-  \multicolumn{4}{|c|}{\dots} \TBstrut\\
-  \hline
+    \TableRow{30}{24}{\v{z}oye\v{s}a}
+    \TableRow{40}{32}{dayesa}
+    \TableRow{50}{40}{kinyesa}
+    \TableRow{60}{48}{\v{s}oye\v{s}a}
+    \TableRow{70}{56}{payesa}
+    \DotRow
 
-  \oct{30} & \dec{24} &
-  \textlangle \v{z}oye\v{s}a\textrangle & \TBstrut\\
-  \hline
-  \oct{40} & \dec{32} &
-  \textlangle dayesa\textrangle & \TBstrut\\
-  \hline
-  \oct{50} & \dec{40} &
-  \textlangle kinyesa\textrangle & \TBstrut\\
-  \hline
-  \oct{60} & \dec{48} &
-  \textlangle \v{s}oye\v{s}a\textrangle & \TBstrut\\
-  \hline
-  \oct{70} & \dec{56} &
-  \textlangle payesa\textrangle & \TBstrut\\
-  \hline
-  \multicolumn{4}{|c|}{\dots} \TBstrut\\
-  \hline
+    \DoubleTableRow{100}{64}{\v{z}emdo}{\v{z}azemdo}
+    \DoubleTableRow{101}{65}{\v{z}emdo puyesa \v{z}añe}{\v{z}azemdo puyesa \v{z}añe}
+    \DoubleTableRow{102}{66}{\v{z}emdo puyesa \v{s}ite}{\v{z}azemdo puyesa \v{s}ite}
+    \DotRow
 
-  \multirow{2}{*}{\oct{100}} & \multirow{2}{*}{\dec{64}} &
-  \textlangle \v{z}emdo\textrangle & \Tstrut\\
-  & & \textlangle \v{z}azemdo\textrangle & \Bstrut\\
-  \hline
-  \multirow{2}{*}{\oct{101}} & \multirow{2}{*}{\dec{65}} &
-  \textlangle \v{z}emdo puyesa \v{z}añe\textrangle & \Tstrut\\
-  & & \textlangle \v{z}azemdo puyesa \v{z}añe\textrangle & \Bstrut\\
-  \hline
-  \multirow{2}{*}{\oct{102}} & \multirow{2}{*}{\dec{66}} &
-  \textlangle \v{z}emdo puyesa \v{s}ite\textrangle & \Tstrut\\
-  & & \textlangle \v{z}azemdo puyesa \v{s}ite\textrangle & \Bstrut\\
-  \hline
-  \multicolumn{4}{|c|}{\dots} \TBstrut\\
-  \hline
+    \DoubleTableRow{110}{72}{\v{z}emdo yesa}{\v{z}azemdo \v{z}aye\v{s}a}
+    \DoubleTableRow{120}{80}{\v{z}emdo \v{s}iye\v{s}a}{\v{z}azemdo \v{s}iye\v{s}a}
+    \DotRow
 
-  \multirow{2}{*}{\oct{110}} & \multirow{2}{*}{\dec{72}} &
-  \textlangle \v{z}emdo yesa\textrangle & \Tstrut\\
-  & & \textlangle \v{z}azemdo \v{z}aye\v{s}a\textrangle & \Bstrut\\
-  \hline
-  \multirow{2}{*}{\oct{120}} & \multirow{2}{*}{\dec{80}} &
-  \textlangle \v{z}emdo \v{s}iye\v{s}a\textrangle & \Tstrut\\
-  & & \textlangle \v{z}azemdo \v{s}iye\v{s}a\textrangle & \Bstrut\\
-  \hline
-  \multicolumn{4}{|c|}{\dots} \TBstrut\\
-  \hline
-
-  \oct{200} & \dec{128} &
-  \textlangle \v{s}izemdo\textrangle & \TBstrut\\
-  \hline
-  \oct{300} & \dec{192} &
-  \textlangle zozemdo\textrangle & \TBstrut\\
-  \hline
-  \oct{400} & \dec{256} &
-  \textlangle da\v{z}emdo\textrangle & \TBstrut\\
-  \hline
-  \oct{500} & \dec{320} &
-  \textlangle ki\v{z}emdo\textrangle & \TBstrut\\
-  \hline
-  \oct{600} & \dec{384} &
-  \textlangle sozemdo\textrangle & \TBstrut\\
-  \hline
-  \oct{700} & \dec{448} &
-  \textlangle pa\v{z}emdo\textrangle & \TBstrut\\
-  \hline
-\end{longtable}
+    \TableRow{200}{128}{\v{s}izemdo}
+    \TableRow{300}{192}{zozemdo}
+    \TableRow{400}{256}{da\v{z}emdo}
+    \TableRow{500}{320}{ki\v{z}emdo}
+    \TableRow{600}{384}{sozemdo}
+    \TableRow{700}{448}{pa\v{z}emdo}
+  \end{longtable}
+}
 
 \subsubsection{Animate}
 Numerals modifying \acrlong{an} nouns are base 10.
 
-\begin{longtable}[l]{|c|c|c|}
-  \hline
-  \textbf{Decimal} &
-  \textbf{Sumsgiwa} & \TBstrut\\
-  \hline
-  \endhead
+{
+  \newcommand{\TableRow}[2]{
+    \dec{#1} &
+    \textlangle #2\textrangle & \SG{#2} \TBstrut\\
+    \hline
+  }
+  \newcommand{\DoubleTableRow}[3]{
+    \multirow{2}{*}{\dec{#1}} &
+    \textlangle #2\textrangle & \SG{#2} \Tstrut\\
+    & \textlangle #3\textrangle & \SG{#3} \Bstrut\\
+    \hline
+  }
+  \newcommand{\DotRow}{
+    \multicolumn{3}{|c|}{\dots} \TBstrut\\
+    \hline
+  }
 
-  \dec{0} &
-  \textlangle \v{z}an\v{z}u\textrangle & \TBstrut\\
-  \hline
-  \dec{1} &
-  \textlangle gasdi\textrangle & \TBstrut\\
-  \hline
-  \dec{2} &
-  \textlangle dosde\textrangle & \TBstrut\\
-  \hline
-  \dec{3} &
-  \textlangle \v{s}ikim\textrangle & \TBstrut\\
-  \hline
-  \dec{4} &
-  \textlangle beku\textrangle & \TBstrut\\
-  \hline
-  \dec{5} &
-  \textlangle cinsi\textrangle & \TBstrut\\
-  \hline
-  \dec{6} &
-  \textlangle \v{s}asdum\textrangle & \TBstrut\\
-  \hline
-  \dec{7} &
-  \textlangle ki\v{s}ge\textrangle & \TBstrut\\
-  \hline
-  \dec{8} &
-  \textlangle \v{z}iso\textrangle & \TBstrut\\
-  \hline
-  \dec{9} &
-  \textlangle zenbe\textrangle & \TBstrut\\
-  \hline
-  \multirow{2}{*}{\dec{10}} &
-  \textlangle kumsgi\textrangle & \Tstrut\\
-  & \textlangle gakumsgi\textrangle & \Bstrut\\
-  \hline
-  \multirow{2}{*}{\dec{11}} &
-  \textlangle kumsgi gasdi\textrangle & \Tstrut\\
-  & \textlangle gakumsgi gasdi\textrangle & \Bstrut\\
-  \hline
-  \multirow{2}{*}{\dec{12}} &
-  \textlangle kumsgi dosde\textrangle & \Tstrut\\
-  & \textlangle gakumsgi dosde\textrangle & \Bstrut\\
-  \hline
-  \multicolumn{3}{|c|}{\dots} \TBstrut\\
-  \hline
+  \begin{longtable}[l]{|c|c|c|}
+    \hline
+    \textbf{Decimal} &
+    \textbf{Sumsgiwa} & \TBstrut\\
+    \hline
+    \endhead
 
-  \dec{20} &
-  \textlangle dokumsgi\textrangle & \TBstrut\\
-  \hline
-  \dec{21} &
-  \textlangle dokumsgi gasdi\textrangle & \TBstrut\\
-  \hline
-  \multicolumn{3}{|c|}{\dots} \TBstrut\\
-  \hline
+    \TableRow{0}{\v{z}an\v{z}u}
+    \TableRow{1}{gasdi}
+    \TableRow{2}{dosde}
+    \TableRow{3}{\v{s}ikim}
+    \TableRow{4}{beku}
+    \TableRow{5}{cinsi}
+    \TableRow{6}{\v{s}asdum}
+    \TableRow{7}{ki\v{s}ge}
+    \TableRow{8}{\v{z}iso}
+    \TableRow{9}{zenbe}
+    \DoubleTableRow{10}{kumsgi}{gakumsgi}
+    \DoubleTableRow{11}{kumsgi gasdi}{gakumsgi gasdi}
+    \DoubleTableRow{12}{kumsgi dosde}{gakumsgi dosde}
+    \DotRow
 
-  \dec{30} &
-  \textlangle \v{s}ikumsgi\textrangle & \TBstrut\\
-  \hline
-  \dec{40} &
-  \textlangle bekumsgi\textrangle & \TBstrut\\
-  \hline
-  \dec{50} &
-  \textlangle cikumsgi\textrangle & \TBstrut\\
-  \hline
-  \dec{60} &
-  \textlangle \v{s}asgumsi\textrangle & \TBstrut\\
-  \hline
-  \dec{70} &
-  \textlangle ki\v{s}gumsi\textrangle & \TBstrut\\
-  \hline
-  \dec{80} &
-  \textlangle \v{z}ikumsgi\textrangle & \TBstrut\\
-  \hline
-  \dec{90} &
-  \textlangle zekumsgi\textrangle & \TBstrut\\
-  \hline
-  \multicolumn{3}{|c|}{\dots} \TBstrut\\
-  \hline
+    \TableRow{20}{dokumsgi}
+    \TableRow{21}{dokumsgi gasdi}
+    \DotRow
 
-  \multirow{2}{*}{\dec{100}} &
-  \textlangle du\v{z}o\textrangle & \Tstrut\\
-  & \textlangle gadu\v{z}o\textrangle & \Bstrut\\
-  \hline
-  \multirow{2}{*}{\dec{101}} &
-  \textlangle du\v{z}o \v{z}akumsgi gasdi\textrangle & \Tstrut\\
-  & \textlangle gadu\v{z}o \v{z}akumsgi gasdi\textrangle & \Bstrut\\
-  \hline
-  \multirow{2}{*}{\dec{102}} &
-  \textlangle du\v{z}o \v{z}akumsgi dosde\textrangle & \Tstrut\\
-  & \textlangle du\v{z}o \v{z}akumsgi dosde\textrangle & \Bstrut\\
-  \hline
-  \multicolumn{3}{|c|}{\dots} \TBstrut\\
-  \hline
+    \TableRow{30}{\v{s}ikumsgi}
+    \TableRow{40}{bekumsgi}
+    \TableRow{50}{cikumsgi}
+    \TableRow{60}{\v{s}asgumsi}
+    \TableRow{70}{ki\v{s}gumsi}
+    \TableRow{80}{\v{z}ikumsgi}
+    \TableRow{90}{zekumsgi}
+    \DotRow
 
-  \multirow{2}{*}{\dec{110}} &
-  \textlangle du\v{z}o kumsgi\textrangle & \Tstrut\\
-  & \textlangle gadu\v{z}o gakumsgi\textrangle & \Bstrut\\
-  \hline
-  \multirow{2}{*}{\dec{120}} &
-  \textlangle du\v{z}o dokumsgi\textrangle & \Tstrut\\
-  & \textlangle gadu\v{z}o dokumsgi\textrangle & \Bstrut\\
-  \hline
-  \multicolumn{3}{|c|}{\dots} \TBstrut\\
-  \hline
+    \DoubleTableRow{100}{du\v{z}o}{gadu\v{z}o}
+    \DoubleTableRow{101}{du\v{z}o \v{z}akumsgi gasdi}{gadu\v{z}o \v{z}akumsgi gasdi}
+    \DoubleTableRow{102}{du\v{z}o \v{z}akumsgi dosde}{gadu\v{z}o \v{z}akumsgi dosde}
+    \DotRow
 
-  \dec{200} &
-  \textlangle dodu\v{z}o\textrangle & \TBstrut\\
-  \hline
-  \dec{300} &
-  \textlangle \v{s}iduzo\textrangle & \TBstrut\\
-  \hline
-  \dec{400} &
-  \textlangle bedu\v{z}o\textrangle & \TBstrut\\
-  \hline
-  \dec{500} &
-  \textlangle cidu\v{z}o\textrangle & \TBstrut\\
-  \hline
-  \dec{600} &
-  \textlangle \v{s}aduzo\textrangle & \TBstrut\\
-  \hline
-  \dec{700} &
-  \textlangle kidu\v{z}o\textrangle & \TBstrut\\
-  \hline
-  \dec{800} &
-  \textlangle \v{z}iduzo\textrangle & \TBstrut\\
-  \hline
-  \dec{900} &
-  \textlangle zedu\v{z}o\textrangle & \TBstrut\\
-  \hline
-\end{longtable}
+    \DoubleTableRow{110}{du\v{z}o kumsgi}{gadu\v{z}o gakumsgi}
+    \DoubleTableRow{120}{du\v{z}o dokumsgi}{gadu\v{z}o dokumsgi}
+    \DotRow
+
+    \TableRow{200}{dodu\v{z}o}
+    \TableRow{300}{\v{s}iduzo}
+    \TableRow{400}{bedu\v{z}o}
+    \TableRow{500}{cidu\v{z}o}
+    \TableRow{600}{\v{s}aduzo}
+    \TableRow{700}{kidu\v{z}o}
+    \TableRow{800}{\v{z}iduzo}
+    \TableRow{900}{zedu\v{z}o}
+  \end{longtable}
+}
 
 \subsubsection{Inanimate}
 Numerals modifying \acrlong{inan} nouns are base 12.
 
-\begin{longtable}[l]{|c|c|c|c|}
-  \hline
-  \textbf{Dozenal} &
-  \textbf{Decimal} &
-  \textbf{Sumsgiwa} & \TBstrut\\
-  \hline
-  \endhead
+{
+  \newcommand{\TableRow}[3]{
+    \doz{#1} & \dec{#2} &
+    \textlangle #3\textrangle & \SG{#3} \TBstrut\\
+    \hline
+  }
+  \newcommand{\DoubleTableRow}[4]{
+    \multirow{2}{*}{\doz{#1}} & \multirow{2}{*}{\dec{#2}} &
+    \textlangle #3\textrangle & \SG{#3} \Tstrut\\
+    & & \textlangle #4\textrangle & \SG{#4} \Bstrut\\
+    \hline
+  }
+  \newcommand{\DotRow}{
+    \multicolumn{4}{|c|}{\dots} \TBstrut\\
+    \hline
+  }
 
-  \doz{0} & \dec{0} &
-  \textlangle kamda\textrangle & \TBstrut\\
-  \hline
-  \doz{1} & \dec{1} &
-  \textlangle \v{s}udo\textrangle & \TBstrut\\
-  \hline
-  \doz{2} & \dec{2} &
-  \textlangle ki\v{s}e\textrangle & \TBstrut\\
-  \hline
-  \doz{3} & \dec{3} &
-  \textlangle \v{c}e\v{s}in\textrangle & \TBstrut\\
-  \hline
-  \doz{4} & \dec{4} &
-  \textlangle sgonti\textrangle & \TBstrut\\
-  \hline
-  \doz{5} & \dec{5} &
-  \textlangle \v{z}ago\textrangle & \TBstrut\\
-  \hline
-  \doz{6} & \dec{6} &
-  \textlangle pi\v{z}u\textrangle & \TBstrut\\
-  \hline
-  \doz{7} & \dec{7} &
-  \textlangle \v{s}deke\textrangle & \TBstrut\\
-  \hline
-  \doz{8} & \dec{8} &
-  \textlangle semdum\textrangle & \TBstrut\\
-  \hline
-  \doz{9} & \dec{9} &
-  \textlangle cu\v{s}e\textrangle & \TBstrut\\
-  \hline
-  \doz{$\chi$} & \dec{10} &
-  \textlangle \v{s}odu\textrangle & \TBstrut\\
-  \hline
-  \doz{$\xi$} & \dec{11} &
-  \textlangle \v{z}udan\textrangle & \TBstrut\\
-  \hline
-  \multirow{2}{*}{\doz{10}} & \multirow{2}{*}{\dec{12}} &
-  \textlangle bo\v{s}a\textrangle & \Tstrut\\
-  & & \textlangle \v{s}ubosa\textrangle & \Bstrut\\
-  \hline
+  \begin{longtable}[l]{|c|c|c|c|}
+    \hline
+    \textbf{Dozenal} &
+    \textbf{Decimal} &
+    \textbf{Sumsgiwa} & \TBstrut\\
+    \hline
+    \endhead
 
-  \multirow{2}{*}{\doz{11}} & \multirow{2}{*}{\dec{13}} &
-  \textlangle bo\v{s}a \v{s}udo\textrangle & \Tstrut\\
-  & & \textlangle \v{s}ubosa \v{s}udo\textrangle & \Bstrut\\
-  \hline
-  \multirow{2}{*}{\doz{12}} & \multirow{2}{*}{\dec{14}} &
-  \textlangle bo\v{s}a ki\v{s}e\textrangle & \Tstrut\\
-  & & \textlangle \v{s}ubosa ki\v{s}e\textrangle & \Bstrut\\
-  \hline
-  \multicolumn{4}{|c|}{\dots} \TBstrut\\
-  \hline
+    \TableRow{0}{0}{kamda}
+    \TableRow{1}{1}{\v{s}udo}
+    \TableRow{2}{2}{ki\v{s}e}
+    \TableRow{3}{3}{\v{c}e\v{s}in}
+    \TableRow{4}{4}{sgonti}
+    \TableRow{5}{5}{\v{z}ago}
+    \TableRow{6}{6}{pi\v{z}u}
+    \TableRow{7}{7}{\v{s}deke}
+    \TableRow{8}{8}{semdum}
+    \TableRow{9}{9}{cu\v{s}e}
+    \TableRow{$\chi$}{10}{\v{s}odu}
+    \TableRow{$\xi$}{11}{\v{z}udan}
+    \DoubleTableRow{10}{12}{bo\v{s}a}{\v{s}ubosa}
+    \DoubleTableRow{11}{13}{bo\v{s}a \v{s}udo}{\v{s}ubosa \v{s}udo}
+    \DoubleTableRow{12}{14}{bo\v{s}a ki\v{s}e}{\v{s}ubosa ki\v{s}e}
+    \DotRow
 
-  \doz{20} & \dec{24} &
-  \textlangle kibo\v{s}a\textrangle & \TBstrut\\
-  \hline
-  \doz{21} & \dec{25} &
-  \textlangle kibo\v{s}a \v{s}udo\textrangle & \TBstrut\\
-  \hline
-  \multicolumn{4}{|c|}{\dots} \TBstrut\\
-  \hline
+    \TableRow{20}{24}{kibo\v{s}a}
+    \TableRow{21}{25}{kibo\v{s}a \v{s}udo}
+    \DotRow
 
-  \doz{30} & \dec{36} &
-  \textlangle \v{c}ebo\v{s}a\textrangle & \TBstrut\\
-  \hline
-  \doz{40} & \dec{48} &
-  \textlangle sgobo\v{s}a\textrangle & \TBstrut\\
-  \hline
-  \doz{50} & \dec{60} &
-  \textlangle \v{z}abosa\textrangle & \TBstrut\\
-  \hline
-  \doz{60} & \dec{72} &
-  \textlangle pibo\v{s}a\textrangle & \TBstrut\\
-  \hline
-  \doz{70} & \dec{84} &
-  \textlangle \v{s}debo\v{s}a\textrangle & \TBstrut\\
-  \hline
-  \doz{80} & \dec{96} &
-  \textlangle sempo\v{s}a\textrangle & \TBstrut\\
-  \hline
-  \doz{90} & \dec{108} &
-  \textlangle cubosa\textrangle & \TBstrut\\
-  \hline
-  \doz{$\chi$0} & \dec{120} &
-  \textlangle \v{s}obosa\textrangle & \TBstrut\\
-  \hline
-  \doz{$\xi$0} & \dec{132} &
-  \textlangle \v{z}ubosa\textrangle & \TBstrut\\
-  \hline
-  \multicolumn{4}{|c|}{\dots} \TBstrut\\
-  \hline
+    \TableRow{30}{36}{\v{c}ebo\v{s}a}
+    \TableRow{40}{48}{sgobo\v{s}a}
+    \TableRow{50}{60}{\v{z}abosa}
+    \TableRow{60}{72}{pibo\v{s}a}
+    \TableRow{70}{84}{\v{s}debo\v{s}a}
+    \TableRow{80}{96}{sempo\v{s}a}
+    \TableRow{90}{108}{cubosa}
+    \TableRow{$\chi$0}{120}{\v{s}obosa}
+    \TableRow{$\xi$0}{132}{\v{z}ubosa}
+    \DotRow
 
-  \multirow{2}{*}{\doz{100}} & \multirow{2}{*}{\dec{144}} &
-  \textlangle ko\v{s}im\textrangle & \Tstrut\\
-  & & \textlangle \v{s}uko\v{s}im\textrangle & \Bstrut\\
-  \hline
-  \multirow{2}{*}{\doz{101}} & \multirow{2}{*}{\dec{145}} &
-  \textlangle ko\v{s}im kamposa \v{s}udo\textrangle & \Tstrut\\
-  & & \textlangle \v{s}uko\v{s}im kamposa \v{s}udo\textrangle & \Bstrut\\
-  \hline
-  \multirow{2}{*}{\doz{102}} & \multirow{2}{*}{\dec{146}} &
-  \textlangle ko\v{s}im kamposa ki\v{s}e\textrangle & \Tstrut\\
-  & & \textlangle \v{s}uko\v{s}im kamposa ki\v{s}e\textrangle & \Bstrut\\
-  \hline
-  \multicolumn{4}{|c|}{\dots} \TBstrut\\
-  \hline
+    \DoubleTableRow{100}{144}{ko\v{s}im}{\v{s}uko\v{s}im}
+    \DoubleTableRow{101}{145}{ko\v{s}im kamposa \v{s}udo}{\v{s}uko\v{s}im kamposa \v{s}udo}
+    \DoubleTableRow{102}{146}{ko\v{s}im kamposa ki\v{s}e}{\v{s}uko\v{s}im kamposa ki\v{s}e}
+    \DotRow
 
-  \multirow{2}{*}{\doz{110}} & \multirow{2}{*}{\dec{156}} &
-  \textlangle ko\v{s}im bo\v{s}a\textrangle & \Tstrut\\
-  & & \textlangle \v{s}uko\v{s}im \v{s}ubosa\textrangle & \Bstrut\\
-  \hline
-  \multirow{2}{*}{\doz{120}} & \multirow{2}{*}{\dec{168}} &
-  \textlangle ko\v{s}im kibo\v{s}a\textrangle & \Tstrut\\
-  & & \textlangle \v{s}uko\v{s}im kibo\v{s}a\textrangle & \Bstrut\\
-  \hline
-  \multicolumn{4}{|c|}{\dots} \TBstrut\\
-  \hline
+    \DoubleTableRow{110}{156}{ko\v{s}im bo\v{s}a}{\v{s}uko\v{s}im \v{s}ubosa}
+    \DoubleTableRow{120}{168}{ko\v{s}im kibo\v{s}a}{\v{s}uko\v{s}im kibo\v{s}a}
+    \DotRow
 
-  \doz{200} & \dec{288} &
-  \textlangle kigosim\textrangle & \TBstrut\\
-  \hline
-  \doz{300} & \dec{432} &
-  \textlangle \v{c}eko\v{s}im\textrangle & \TBstrut\\
-  \hline
-  \doz{400} & \dec{576} &
-  \textlangle sgokosim\textrangle & \TBstrut\\
-  \hline
-  \doz{500} & \dec{720} &
-  \textlangle \v{z}akosim\textrangle & \TBstrut\\
-  \hline
-  \doz{600} & \dec{864} &
-  \textlangle piko\v{s}im\textrangle & \TBstrut\\
-  \hline
-  \doz{700} & \dec{1008} &
-  \textlangle \v{s}degesim\textrangle & \TBstrut\\
-  \hline
-  \doz{800} & \dec{1152} &
-  \textlangle semgo\v{s}im\textrangle & \TBstrut\\
-  \hline
-  \doz{900} & \dec{1296} &
-  \textlangle cukosim\textrangle & \TBstrut\\
-  \hline
-  \doz{$\chi$00} & \dec{1440} &
-  \textlangle \v{s}oko\v{s}im\textrangle & \TBstrut\\
-  \hline
-  \doz{$\xi$00} & \dec{1584} &
-  \textlangle \v{z}ukosim\textrangle & \TBstrut\\
-  \hline
-\end{longtable}
+    \TableRow{200}{288}{kigosim}
+    \TableRow{300}{432}{\v{c}eko\v{s}im}
+    \TableRow{400}{576}{sgokosim}
+    \TableRow{500}{720}{\v{z}akosim}
+    \TableRow{600}{864}{piko\v{s}im}
+    \TableRow{700}{1008}{\v{s}degesim}
+    \TableRow{800}{1152}{semgo\v{s}im}
+    \TableRow{900}{1296}{cukosim}
+    \TableRow{$\chi$00}{1440}{\v{s}oko\v{s}im}
+    \TableRow{$\xi$00}{1584}{\v{z}ukosim}
+  \end{longtable}
+}
 
-\subsection{D-Quantifiers}
+\subsection{D-Quantifiers}\label{05_02_D-Quantifiers}
 D-quantifiers agree with nouns in gender.
 
-\begin{tabular}{|l|c|c|c|}
-  \hline
-  & \Glossfull{hg} &
-  \Glossfull{an} &
-  \Glossfull{inan} \TBstrut\\
-  \hline
+{
+  \newcommand{\TableRow}[4]{
+    \multirow{2}{*}{#1} &
+    \textlangle #2\textrangle &
+    \textlangle #3\textrangle &
+    \textlangle #4\textrangle \Tstrut\\
+    & \SG{#2} & \SG{#3} & \SG{#4} \Bstrut\\
+    \hline
+  }
 
-  \multirow{2}{*}{none/zero} &
-  \textlangle zosi\textrangle &
-  \textlangle sodi\textrangle &
-  \textlangle \v{s}ugi\textrangle \Tstrut\\
-  & & & \Bstrut\\
-  \hline
+  \begin{tabular}{|l|c|c|c|}
+    \hline
+    & \Glossfull{hg} &
+    \Glossfull{an} &
+    \Glossfull{inan} \TBstrut\\
+    \hline
 
-  \multirow{2}{*}{some/a few} &
-  \textlangle diñ\v{s}u\textrangle &
-  \textlangle po\v{s}u\textrangle &
-  \textlangle \v{c}ogi\textrangle \Tstrut\\
-  & & & \Bstrut\\
-  \hline
-
-  \multirow{2}{*}{many/most} &
-  \textlangle \v{s}esbun\textrangle &
-  \textlangle sbeso\textrangle &
-  \textlangle \v{s}base\textrangle \Tstrut\\
-  & & & \Bstrut\\
-  \hline
-
-  \multirow{2}{*}{all/every} &
-  \textlangle \v{z}i\.{z}e\textrangle &
-  \textlangle ka\v{s}o\textrangle &
-  \textlangle \.{z}e\v{s}o\textrangle \Tstrut\\
-  & & & \Bstrut\\
-  \hline
-\end{tabular}
+    \TableRow{none/zero}{zosi}{sodi}{\v{s}ugi}
+    \TableRow{some/a few}{diñ\v{s}u}{po\v{s}u}{\v{c}ogi}
+    \TableRow{many/most}{\v{s}esbun}{sbeso}{\v{s}base}
+    \TableRow{each/every}{\v{z}i\.{z}e}{ka\v{s}o}{\.{z}e\v{s}o}
+  \end{tabular}
+}
 
 \subsection{A-Quantifiers}
 Explicit A-quantifiers are not applicable to \acrlong{pfv} and \acrlong{prog} aspects.
 
-\begin{tabular}{|m{8em}|l|c|c|}
-  \hline
-  \textbf{Meaning} &
-  \textbf{\Acrshort{tam}} &
-  \textbf{Adverb} &
-  \textbf{} \TBstrut\\
-  \hline
-  usually/often &
-  \Acrlong{pos} \Acrlong{hab} &
-  & \TBstrut\\
-  \hline
-  usually doesn't/\newline only rarely &
-  \Acrlong{neg} \Acrlong{hab} &
-  & \TBstrut\\
-  \hline
-  always &
-  \Acrlong{pos} \Acrlong{hab} &
-  \textlangle siyu\v{z}i\textrangle & \TBstrut\\
-  \hline
-  never &
-  \Acrlong{pos} \Acrlong{hab} &
-  \textlangle ke\v{z}in\textrangle & \TBstrut\\
-  \hline
-  Specified number\newline of repetitions &
-  \Acrlong{pos} \Acrlong{iter} &
-  \textlangle \v{z}edun\textrangle~+ \Inan~numeral & \TBstrut\\
-  \hline
-\end{tabular}
+{
+  \newcommand{\TableRow}[3]{
+    #1 & #2 & \textlangle #3\textrangle & \SG{#3} \TBstrut\\
+    \hline
+  }
+
+  \begin{tabular}{|m{8em}|l|c|c|}
+    \hline
+    \textbf{Meaning} &
+    \textbf{\Acrshort{tam}} &
+    \textbf{Adverb} &
+    \textbf{} \TBstrut\\
+    \hline
+
+    \TableRow{usually/often}{\Acrlong{pos} \Acrlong{hab}}{}
+    \TableRow{usually doesn't/\newline only rarely}{\Acrlong{neg} \Acrlong{hab}}{}
+    \TableRow{always}{\Acrlong{pos} \Acrlong{hab}}{siyu\v{z}i}
+    \TableRow{never}{\Acrlong{neg} \Acrlong{hab}}{ke\v{z}in}
+
+    Specified number\newline of repetitions &
+    \Acrlong{pos} \Acrlong{iter} &
+    \textlangle \v{z}edun\textrangle~+ \Inan~numeral &
+    \SG{\v{z}edun} \TBstrut\\
+    \hline
+  \end{tabular}
+}
