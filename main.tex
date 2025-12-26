@@ -1,4 +1,4 @@
-% !TeX recipe = lualatex
+% !TeX recipe = latexmk
 
 \documentclass[12pt, letterpaper]{article}
 \usepackage[letterpaper, portrait, margin=1in]{geometry}
@@ -109,7 +109,7 @@
 \setglossarystyle{mcolindex}
 \renewcommand{\leipzigfont}[1]{\textsc{#1}}
 \makeglossaries
-\input{00_Glossary}
+\include{00_Glossary}
 \newcommand\Glossfull[2][]{\Acrlong[#1]{#2} \acrshort[#1]{#2}}
 \newcommand\glossfull[2][]{\acrlong[#1]{#2} \acrshort[#1]{#2}}
 
@@ -141,6 +141,8 @@
 \newcommand{\dec}[1]{#1\textsubscript{10}}
 \newcommand{\doz}[1]{#1\textsubscript{12}}
 
+% \includeonly{07_Translations}
+
 \title{Sumsgiwa}
 \author{liujip0}
 \date{December 2024}
@@ -150,14 +152,14 @@
 \tableofcontents
 \clearpage
 
-\input{00_Util}
-\input{01_Introduction}
-\input{02_Typology}
-\input{03_Phonology}
-\input{04_Grammar/04_Grammar}
-\input{05_Quantifiers}
-\input{06_Lexicon/06_Lexicon}
-\input{07_Translations}
+\include{00_Util}
+\include{01_Introduction}
+\include{02_Typology}
+\include{03_Phonology}
+\include{04_Grammar/04_Grammar}
+\include{05_Quantifiers}
+\include{06_Lexicon/06_Lexicon}
+\include{07_Translations}
 
 \clearpage
 \printglossary

@@ -1,12 +1,12 @@
 {
   "latex-workshop.latex.recipes": [
     {
-      "name": "lualatex",
-      "tools": ["makeglossaries", "lualatex"]
-    },
-    {
       "name": "lualatexmk",
       "tools": ["lualatexmk"]
+    },
+    {
+      "name": "lualatex",
+      "tools": ["lualatex", "makeglossaries", "lualatex"]
     },
     {
       "name": "lualatex (latexmkrc)",
